@@ -17,7 +17,7 @@ def user_profile_validator(fn, age, mob, email, country):
     if "@" not in email or "." not in email:
         error.append("email must be a valid email address")
     if country not in ["India", "UAE", "USA", "UK"]:
-        error.append("country must be India")
+        error.append("country must be India, UAE, USA, or UK")
     if error:
         return(", ".join(error))
     else:
