@@ -1,3 +1,5 @@
+# Problem 11 - Forex transaction batch validator
+
 transactions = [
     {"transaction_id": "TXN001", "amount": 500, "currency": "USD", "status": "PENDING"},
     {"transaction_id": "TXN002", "amount": -100, "currency": "USD", "status": "PENDING"},
