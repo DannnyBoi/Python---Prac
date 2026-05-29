@@ -1,11 +1,18 @@
-user_profile = {
+user_profile = [{
     "full_name": "Daniel Prakash",
     "age": 25,
     "mobile": "9876543210",
     "email": "daniel@gmail.com",
     "country": "India"
+},
+{
+    "full_name": "Deepsiksh",
+    "age": 17,
+    "mobile": "123456789",
+    "email": "invalidemail",
+    "country": "Mars"
 }
-
+]
 def user_profile_validator(fn, age, mob, email, country):
     error = []
     if not fn:
@@ -23,7 +30,29 @@ def user_profile_validator(fn, age, mob, email, country):
     else:
         return("Valid user profile")
 
-print(user_profile_validator(user_profile["full_name"], user_profile["age"], user_profile["mobile"], user_profile["email"], user_profile["country"]))
+"""print(user_profile_validator(user_profile["full_name"], user_profile["age"], user_profile["mobile"], user_profile["email"], user_profile["country"]))
+"""
+for i in user_profile:
+    print(user_profile_validator(i["full_name"], i["age"], i["mobile"], i["email"], i["country"]))
 
-"""for i in user_profile:
-    print(user_profile_validator(user_profile["full_name"], user_profile["age"], user_profile["mobile"], user_profile["email"], user_profile["country"]))"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
