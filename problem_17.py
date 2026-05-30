@@ -21,9 +21,9 @@ def limit_validator(transaction):
     if transaction["transaction_type"] not in ["WIRE", "SWIFT", "NEFT","RTGS"]:
         error.append("transaction_type must be WIRE, SWIFT, NEFT, or RTGS")
     if error:
-        return(", ".join(error))
+        return(transaction["sender"] + " - " + ", ".join(error))
     else:
-        return("Transaction is valid")
+        return(transaction["sender"]    + " - Transaction is valid")
 
 for txn in transaction:
     print(limit_validator(txn))
