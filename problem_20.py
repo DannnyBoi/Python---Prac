@@ -1,13 +1,31 @@
-kyc_record = {
+kyc_record = [{
     "user_id": "USR001",
     "pan_status": "VERIFIED",
     "aadhaar_status": "PENDING",
     "selfie_status": "VERIFIED",
     "overall_status": "INCOMPLETE"
+},
+{
+    "user_id": "USR002",
+    "pan_status": "VERIFIED",
+    "aadhaar_status": "NA",
+    "selfie_status": "VERIFIED",
+    "overall_status": "NA"
+},
+{ "user_id": "",
+    "pan_status": "NA",
+    "aadhaar_status": "NA",
+    "selfie_status": "NA",
+    "overall_status": "NA"
 }
-
+]
 def validate_kyc(kyc_record):
     error = []
+    if kyc_record["user_id"]:
+        user_display = kyc_record["user_id"]
+    else:
+        user_display = "UNKNOWN"
+
     if not kyc_record["user_id"]:
         error.append("user_id cannot be empty")
     if kyc_record["pan_status"] not in ("VERIFIED", "PENDING", "REJECTED"):
@@ -20,8 +38,9 @@ def validate_kyc(kyc_record):
         error.append("overall_status must be one of — COMPLETE, INCOMPLETE, UNDER_REVIEW")
     
     if error:
-        return(kyc_record["user_id"] + " : " + ", ".join(error))
+        return(user_display + " : " + ", ".join(error))
     else:
-        return(kyc_record["user_id"] + " : Valid KYC")
+        return(user_display + " : Valid KYC")
 
-print(validate_kyc(kyc_record))
+for kyc_check in kyc_record:
+    print(validate_kyc(kyc_check))
