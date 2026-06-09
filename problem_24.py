@@ -21,3 +21,8 @@ def calculate_transaction_fee(calc):
     
 for transfer_check in transactions:
     print(calculate_transaction_fee(transfer_check))
+
+
+"""Just for my info:
+When we give a parameter to a function, it acts like a temp storage while the function runs a loop; after that one run, the parameter gets cleared... 
+for example, here when I run the for loop, transfer_check takes the first dict and stores values into calc(the function parameter) and hence we are calling calc throughout the function and not transaction....."""
