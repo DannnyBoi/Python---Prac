@@ -10,3 +10,7 @@ def process_transaction(transaction_data, user_input):
 process_transaction({"user_id": "USR001"}, "5000")
 process_transaction({"user_id": "USR001"}, "abc")
 process_transaction({}, "5000")
+
+
+
+#ValueError, KeyError, TypeError
