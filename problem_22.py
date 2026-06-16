@@ -4,7 +4,7 @@ sender = [{
     "dob": "2002-07-11",
     "nationality": "Indian",
     "account_status": "ACTIVE",
-    "kyc_verified": False
+    "kyc_verified": True
 },
 {
     "sender_id": "SND002",
