@@ -1,5 +1,5 @@
 transaction_fee = [{
-    "txn_id": "TX001",
+    "txn_id": "TX0001",
     "txn_amount": 50000,
     "fee_percentage": 1.5,
     "fee_amount": 750.0,
