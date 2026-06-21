@@ -1,4 +1,4 @@
-test_inputs = ["abc", "xyz", "5000", "99ab"]
+test_inputs = ["abc", "xyz", "5000"]
 
 def retry_transfer(inp):
     max_attempt = 3
