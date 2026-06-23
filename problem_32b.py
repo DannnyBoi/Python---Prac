@@ -1,6 +1,6 @@
 print("Self trial")
 
-test_inputs = ["abc", "xyz", "5000"]
+test_inputs = ["abcd", "xyz", "5000"]
 
 def xyz(inp):
     attempt = 1
