@@ -7,4 +7,4 @@ def validate_amount(check):
 
 validate_amount("5000")
 validate_amount("abc")
-validate_amount("")
+validate_amount("zzzzz22")
